@@ -1,28 +1,26 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab1.css';
+import { IonContent, IonButton, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import CenteredContainer from '../components/CenteredContainer';
 
-const Tab1: React.FC = () => {
+const Tab1Nested: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Tab 1 Nested</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Tab 1 Nested</IonTitle>
           </IonToolbar>
         </IonHeader>
         <CenteredContainer>
-          <IonButton routerLink="/tab1/nested">Go to nested page</IonButton>
+          <IonButton routerLink="/tab1/nested/subnested">Go to sub nested page</IonButton>
         </CenteredContainer>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab1;
+export default Tab1Nested;
